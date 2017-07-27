@@ -10,7 +10,7 @@ get_header(); ?>
             <div class="logo">Login</div>
             <!-- Main Form -->
             <div class="login-form-1">
-                <form id="login-form" class="text-left" name="loginform" id="loginform" action="http://justhinter.com/wp-login.php" method="post">
+                <form class="text-left" name="loginform" id="loginform" action="http://justhinter.com/wp-login.php" method="post">
                     <div class="login-form-main-message"></div>
                     <div class="main-login-form">
                         <div class="login-group">
@@ -26,6 +26,13 @@ get_header(); ?>
                                 <input type="checkbox" id="lg_remember" name="lg_remember" value="forever">
                                 <label for="lg_remember">remember</label>
                             </div>
+                            <?php echo apply_filters( 'cptch_display', '', 'loginform' ); ?>
+                            <?php $error = apply_filters( 'cptch_verify', true, 'string', 'loginform' );
+                            if ( true === $error ) { /* the CAPTCHA answer is right */
+                                /* do necessary action */
+                            } else { /* the CAPTCHA answer is wrong or there are some other errors */
+                                echo $error; /* display the error message or do other necessary actions in case when the CAPTCHA test was failed */
+                            } ?>
                         </div>
                         <button type="submit" name="wp-submit" id="wp-submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
                         <input type="hidden" name="redirect_to" value="http://justhinter/login-page/" />
