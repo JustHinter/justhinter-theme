@@ -16,7 +16,7 @@
 							'items_wrap' => '%3$s',
 							'theme_location' => 'primary'
 						) ); } ?>
-            <li class="menu-item"><a href="http://justhinter.com/login-page">Login</a></li>
+            <li class="menu-item"><a href="http://justhinter.com/login-page"><?php echo is_user_logged_in()? " Dashboard ": " Login " ?></a></li>
 
         </ul>
 
