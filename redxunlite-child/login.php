@@ -10,7 +10,7 @@ get_header(); ?>
             <div class="logo">Login</div>
             <!-- Main Form -->
             <div class="login-form-1">
-                <form id="login-form" class="text-left" name="loginform" id="loginform" action="http://localhost:8080/wp-login.php" method="post">
+                <form id="login-form" class="text-left" name="loginform" id="loginform" action="wp-login.php" method="post">
                     <div class="login-form-main-message"></div>
                     <div class="main-login-form">
                         <div class="login-group">
@@ -28,7 +28,7 @@ get_header(); ?>
                             </div>
                         </div>
                         <button type="submit" name="wp-submit" id="wp-submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
-                        <input type="hidden" name="redirect_to" value="http://localhost:8080/index.php/login-page/" />
+                        <input type="hidden" name="redirect_to" value="/login-page/" />
                     </div>
                     <div class="etc-login-form">
                         <p>forgot your password? <a href="#">click here</a></p>

@@ -54,7 +54,7 @@ add_action('wp_enqueue_scripts', 'add_registration_script');
 
 /** Redirection on logout */
 function logout_page() {
-    $login_page  = home_url( '/login-page/' );
+    $login_page  = home_url('login-page');
     wp_redirect( $login_page );
     exit;
 }
