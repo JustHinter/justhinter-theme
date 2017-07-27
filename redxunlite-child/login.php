@@ -10,7 +10,7 @@ get_header(); ?>
             <div class="logo">Login</div>
             <!-- Main Form -->
             <div class="login-form-1">
-                <form id="login-form" class="text-left" name="loginform" id="loginform" action="/wp-login.php" method="post">
+                <form id="login-form" class="text-left" name="wp_login" id="loginform" action="/wp-login.php" method="post">
                     <div class="login-form-main-message"></div>
                     <div class="main-login-form">
                         <div class="login-group">
