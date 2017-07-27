@@ -16,6 +16,7 @@
 							'items_wrap' => '%3$s',
 							'theme_location' => 'primary'
 						) ); } ?>
+            <li class="menu-item"><a href="http://justhinter.com/login-page">Login</a></li>
 
         </ul>
 
@@ -26,6 +27,7 @@
         							'items_wrap' => '%3$s',
         							'theme_location' => 'primary'
         						) ); } ?>
+            <li class="menu-item"><a href="http://justhinter.com/login-page"><button class="btn btn-primary">Login</button></a></li>
             </ul>
 
             <div class="toggles">
