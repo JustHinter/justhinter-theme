@@ -27,12 +27,35 @@ add_action( 'wp_head', 'register_meta_tags');
 /** register more css */
 function reg_more_css(){
     wp_register_style( 'registration-styles', get_stylesheet_directory_uri() . '/css/registration-styles.css' );
+
 }
 
 function add_registration_styles(){
-    if (is_page('login-page'))
+    if (is_page('login-page')){
         wp_enqueue_style('registration-styles');
+    }
 
 }
 add_action('init', 'reg_more_css');
 add_action('wp_enqueue_scripts', 'add_registration_styles');
+
+/** register more js */
+function reg_more_js(){
+    wp_register_script('registration-script', get_stylesheet_directory_uri() . '/js/registration-script.js');
+}
+
+function add_registration_script(){
+    if(is_page('login-page'))
+        wp_enqueue_script('registration-script');
+}
+add_action('init', 'reg_more_js');
+add_action('wp_enqueue_scripts', 'add_registration_script');
+
+
+/** Redirection on logout */
+function logout_page() {
+    $login_page  = home_url( '/login-page/' );
+    wp_redirect( $login_page );
+    exit;
+}
+add_action('wp_logout','logout_page');
