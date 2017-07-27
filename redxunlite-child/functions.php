@@ -17,9 +17,22 @@ function my_custom_login() {
 }
 add_action('login_head', 'my_custom_login');
 
-// Custom Function to Include
-function meta_seo_links() {
+/** register meta tags */
+function register_meta_tags() {
     echo '<meta name="description" content="Just hinter is the is the collection of techniques, skills, methods." >' . "\n";
     echo '<meta name="keywords" content="coding,programming websites,online programs,code for free">' . "\n";
 }
-add_action( 'wp_head', 'meta_seo_links' );
+add_action( 'wp_head', 'register_meta_tags');
+
+/** register more css */
+function reg_more_css(){
+    wp_register_style( 'registration-styles', get_stylesheet_directory_uri() . '/css/registration-styles.css' );
+}
+
+function add_registration_styles(){
+    if (is_page('login-page'))
+        wp_enqueue_style('registration-styles');
+
+}
+add_action('init', 'reg_more_css');
+add_action('wp_enqueue_scripts', 'add_registration_styles');
