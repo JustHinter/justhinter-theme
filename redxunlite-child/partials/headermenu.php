@@ -16,8 +16,7 @@
 							'items_wrap' => '%3$s',
 							'theme_location' => 'primary'
 						) ); } ?>
-            <li class="menu-item"><a href="http://justhinter.com/login-page"><?php echo is_user_logged_in()? " Dashboard ": " Login " ?></a></li>
-
+                    <?php echo is_user_logged_in() ? '' : '<li class="menu-item"><a href="http://justhinter.com/login-page">Login</a></li>'; ?>
         </ul>
 
         <ul class="main-menu">
@@ -27,7 +26,7 @@
         							'items_wrap' => '%3$s',
         							'theme_location' => 'primary'
         						) ); } ?>
-            <li class="menu-item"><a href="http://justhinter.com/login-page"><button class="btn btn-primary">Login</button></a></li>
+            <?php echo is_user_logged_in() ? '' : '<li class="menu-item"><a href="http://justhinter.com/login-page"><button class="btn btn-primary">Login</button></a></li>'; ?>
             </ul>
 
             <div class="toggles">
