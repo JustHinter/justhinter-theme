@@ -12,6 +12,27 @@
  Text Domain:  twenty-fifteen-child
 */
 
+/*------------------------------------------------------------------
+[Customized Stylesheet]
+
+Project    	: JustHinter Theme
+Version		: 1.0
+Last change	: 2017/10/10
+Made by     : M.A. Raza
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+* Header
+
+*/
+
+/*=== Header ===*/
+
+.site-head{
+    height:80%;
+}
+
 .loginbtn {
     display: inline-block;
     position: relative;
