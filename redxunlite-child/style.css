@@ -23,9 +23,14 @@ Made by     : M.A. Raza
 /*------------------------------------------------------------------
 [Table of contents]
 
+* font
 * Header
+* Post
 
 */
+
+/*=== font ===*/
+
 
 /*=== Header ===*/
 
@@ -37,4 +42,19 @@ Made by     : M.A. Raza
     display: inline-block;
     position: relative;
     color: red;
+}
+
+/*=== Posts ===*/
+.narrowcontent{
+    width: 90%;
+}
+
+
+
+.actualarticle {
+    font-family: Georgia,Cambria,"Times New Roman",Times,serif;
+    font-size: 21px;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    color: rgba(0,0,0,.6);
 }
